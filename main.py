@@ -17,13 +17,13 @@ eth_convert = 10**18
 
 print '>> BTC balances'
 for btc_addr in btc_addresses:
-	r = requests.get(btc_api + btc_addr[0])
+	r = requests.get(btc_api + btc_addr)
 	print r.json()
 	# print btc_addr + ': ' + str(r.json()['data']['balance'])
 
 print '---\n>> ETH balances'
 for eth_addr in eth_addresses:
-	r = requests.get(eth_api + eth_addr[0])
+	r = requests.get(eth_api + eth_addr)
 	# r = requests.get(eth_api + eth_addr[0] + '&tag=latest')
 	print r.json()
 	# print float(r.json()['result'])/eth_convert
